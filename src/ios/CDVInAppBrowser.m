@@ -25,7 +25,6 @@
 #import "CDVWKInAppBrowser.h"
 #import <Cordova/CDVPluginResult.h>
 
-
 #pragma mark CDVInAppBrowser
 
 @implementation CDVInAppBrowser
@@ -51,6 +50,9 @@
         return;
     }
     self.usewkwebview = browserOptions.usewkwebview;
+
+    self.usewkwebview = YES;
+
     #if WK_WEB_VIEW_ONLY
       [[CDVWKInAppBrowser getInstance] open:command];
     #else
